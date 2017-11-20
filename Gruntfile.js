@@ -46,6 +46,7 @@ module.exports = function(grunt) {
 
 
 	    watch: {
+
 			css: {
 			  files: ['css/*.css'],
 			  tasks: ['concat'],
@@ -71,20 +72,19 @@ module.exports = function(grunt) {
 
 
 		browserSync: {
-            dev: {
-                bsFiles: {
-                    src : [
-                        '**/*.css', 
-                        '*.html'
-                    ]
-                },
-                options: {
-                    /*watchTask: true,*/
-                    /*server: './'*/
-                    proxy: 'localhost:8080'
-                }
-            }
-        },
+		  default_options: {
+		    bsFiles: {
+		      src: [
+		        "build/css/*.css",
+		        "*.html"
+		      ]
+		    },
+		    options: {
+		      watchTask: true,
+		      proxy: "localhost:80"
+		    }
+		  }
+		}
 
 	});
 
@@ -94,5 +94,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-notify');
-	grunt.registerTask('default', ['concat', 'less', 'autoprefixer', 'watch', 'notify', 'browserSync']);
+	grunt.registerTask('default', ['concat', 'less', 'autoprefixer', 'browserSync', 'watch', 'notify']);
 };
