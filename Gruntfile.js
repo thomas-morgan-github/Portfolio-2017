@@ -74,8 +74,8 @@ module.exports = function(grunt) {
             dev: {
                 bsFiles: {
                     src : [
-                        'C:/wamp64/www/**/*.css', 
-                        'C:/wamp64/www/*.html', 
+                        '**/*.css', 
+                        '*.html'
                     ]
                 },
                 options: {

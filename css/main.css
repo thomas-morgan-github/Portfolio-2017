@@ -5,3 +5,7 @@
   animation: MyAnimation 2s;
   border-radius: 100px;
 }
+span {
+  color: red;
+  color: yellow;
+}
