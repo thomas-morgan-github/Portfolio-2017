@@ -1,0 +1,7 @@
+.heelo {
+  color: red;
+  transform: rotate(30deg);
+  appearance: none;
+  animation: MyAnimation 2s;
+  border-radius: 100px;
+}
