@@ -1,0 +1,147 @@
+
+/* =========================================================
+	Header 
+   ========================================================= */
+
+.header-container {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 121;
+    background: #fff;
+  	box-shadow:0px 1px 1px rgba(0, 0, 0, 0.5);
+
+	.logo {
+		text-align: center;
+		margin: 10px 0 16px 0;
+
+		.logo-name {
+			font-size: 30px;
+			letter-spacing:18;
+			color: #333;
+			font-family: 'Cantarell', sans-serif;
+			text-transform: uppercase;
+			display: block;
+			transition: all 0.2s;
+		}
+		
+		.logo-description {
+			font-size:13px;
+			letter-spacing: 1;
+			color: #333;
+			font-family: 'Cantarell', sans-serif;
+			text-transform: uppercase;
+			display: inline-block;
+			position: relative;
+			transition: all 0.2s;
+
+			&:before {
+				position: absolute;
+				content: "";
+				width: 40px;
+				height: 1px;
+				background: #333;
+				left: -34px;
+				top: 50%;
+				transform: translateX(-50%);
+				transition: all 0.2s;
+			}
+
+			&:after {
+				position: absolute;
+				content: "";
+				width: 40px;
+				height: 1px;
+				background: #333;
+				right: -75px;
+				top: 50%;
+				transform: translateX(-50%);
+				transition: all 0.2s;
+			}
+		}
+
+		&:hover {
+
+			.logo-name {
+				color: #00addc;
+			}
+
+			.logo-description {
+				color: #00addc;
+				
+				&:before, &:after {
+					background: #00addc;
+				}
+			}
+		}		
+	}
+
+	.navbar {
+		margin: 10px;
+
+		.nav {
+			text-align: center;
+
+			li {
+				display: inline-block;
+				text-transform: uppercase;
+				font-family: 'Roboto', sans-serif;
+				font-weight: 700;
+				list-style: none;
+				vertical-align: middle;
+				margin-right: 10px;
+				
+				a {
+					transition: all 0.2s;
+				}
+
+				&:hover {
+					
+					a {
+						color: #00addc;
+					}
+				}
+			}
+			
+			.social-icons {
+				
+				svg {
+					width: 40px;
+					height: 40px;
+				}
+
+				.icon {
+					fill: #000;
+					width: 100px;
+					height: 100px;
+					transition: all 0.2s;
+
+					&:hover {
+						fill: #00addc;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* =========================================================
+	Tablets Up
+   ========================================================= */
+
+@media (min-width:690px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 	
+	
+	.header-container {
+		
+		.logo {
+			float: left;
+			margin: 20px 30px 30px 30px;
+		}
+
+		.navbar { 
+			float: right;
+			margin: 30px;
+		}
+	}
+}

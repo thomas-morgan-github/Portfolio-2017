@@ -1,0 +1,53 @@
+body {
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+}
+/* =========================================================
+	Resets
+   ========================================================= */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+em,
+img,
+strong,
+section,
+footer,
+header,
+menu,
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+/* HTML5 display-role reset for older browsers */
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

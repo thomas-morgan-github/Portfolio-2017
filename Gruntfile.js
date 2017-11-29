@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 
 	    concat: {
 		    css: {
-		      src: ['css/main.css', 'css/contact.css'],
+		      src: ['css/header.css', 'css/cms.css', 'css/fonts.css', 'css/homepage.css', 'css/introduction.css', 'css/portfolio-projects.css'],
 		      dest: 'build/css/styles.css',
 		    },
 	    },
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
 			},
 
 			less: {
-			  files: ['less/*.less'],
+			  files: ['less/templates/homepage/partials/*.less', 'less/templates/*.less'],
 			  tasks: ['less', 'autoprefixer', 'notify:less'],
 			},
 	   },
@@ -62,10 +62,15 @@ module.exports = function(grunt) {
 	    less: {
 		  development: {
 		    options: {
-		      paths: ['less/']
+		      paths: ['less/templates/homepage/partials/', 'less/templates/*.less']
 		    },
 		    files: {
-		      'css/main.css': 'less/main.less'
+		      'css/header.css': 'less/templates/homepage/partials/header.less',
+		      'css/cms.css': 'less/templates/homepage/partials/cms.less',
+		      'css/fonts.css': 'less/templates/fonts.less',
+		      'css/homepage.css': 'less/templates/homepage.less',
+		      'css/introduction.css': 'less/templates/homepage/partials/introduction.less',
+		      'css/portfolio-projects.css': 'less/templates/homepage/partials/portfolio-projects.less',
 		    }
 		  },
 		},
