@@ -176,42 +176,339 @@ ul {
 	Introduction 
    ========================================================= */
 .introduction {
-  background-color: #221f20;
+  background-color: #333;
   margin-top: 141px;
+  overflow: auto;
 }
-.introduction h1 {
+.introduction .container {
+  padding: 40px 30px 70px;
+  overflow: auto;
+}
+.introduction .profile-photo-outside {
+  display: none;
+}
+.introduction .profile-photo-inner {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  vertical-align: top;
+}
+.introduction .intro-description-container {
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 16px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.introduction span {
   font-family: 'Roboto', sans-serif;
   color: #333;
   font-size: 18px;
-  color: #fff;
-  text-align: center;
-  padding: 40px 30px 70px;
-  line-height: 23px;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: normal;
 }
 @media (min-width: 690px) {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
   .introduction {
     margin-top: 112px;
   }
-  .introduction h1 {
-    max-width: 80%;
+  .introduction .container {
+    overflow: auto;
+    max-width: 90%;
     margin: 0 auto;
+    text-align: center;
+  }
+  .introduction .profile-photo-outside {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  .introduction .profile-photo-outside img {
+    width: 210px;
+  }
+  .introduction .profile-photo-inner {
+    display: none;
+  }
+  .introduction .intro-description-container {
+    width: 60%;
+    padding: 30px;
+    display: inline-block;
+  }
+}
+@media (min-width: 1600px) {
+  .introduction .profile-photo-outside img {
+    width: 265px;
+  }
+  .introduction span {
     font-size: 21px;
+    margin-bottom: 25px;
   }
 }
 
 /* =========================================================
 	Portfolio Projects 
    ========================================================= */
+.portfolio-projects .project-title {
+  padding: 50px 30px 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 28px;
+}
+.portfolio-projects .project-image {
+  padding: 40px 30px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.portfolio-projects .project-description {
+  padding: 0 30px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+.portfolio-projects .project-description .info-title {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.portfolio-projects .project-description .info-text {
+  margin-bottom: 40px;
+  line-height: 24px;
+}
+.portfolio-projects .project {
+  overflow: hidden;
+}
 .portfolio-projects .project:nth-child(odd) {
   background-color: #eee;
 }
 .portfolio-projects .project:nth-child(even) {
   background-color: #ddd;
 }
-.portfolio-projects .project-title {
-  padding: 50px 30px 0;
+.portfolio-projects .project-tools {
+  margin-bottom: 20px;
+}
+.portfolio-projects .project-tools .project-tool {
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .html5-shield-left {
+  fill: #E44F26;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .html5-shield-right {
+  fill: #f1662a;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-shield-left {
+  fill: #1572B6;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-shield-right {
+  fill: #33a9dc;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-3-top-left {
+  fill: #ebebeb;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-3-top-right {
+  fill: #fff;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-3-bottom-left {
+  fill: #ebebeb;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-3-bottom-right {
+  fill: #fff;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .less-circle {
+  fill: #214674;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .less-inner-circle {
+  fill: #fff;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .jquery-wave {
+  fill: #3162a8;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__skin,
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__skin,
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__skin {
+  fill: #FBA919;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__outline,
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__outline,
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__outline {
+  fill: #463014;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__shading {
+  fill: #E78724;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .git-icon {
+  fill: #f03c2e;
+}
+.portfolio-projects .project-tools .project-tool svg {
+  width: 100%;
+  max-height: 75px;
+}
+.portfolio-projects .project-tools .project-tool .html5-shield-left,
+.portfolio-projects .project-tools .project-tool .html5-shield-right,
+.portfolio-projects .project-tools .project-tool .html5-text,
+.portfolio-projects .project-tools .project-tool .css3-text,
+.portfolio-projects .project-tools .project-tool .css3-shield-left,
+.portfolio-projects .project-tools .project-tool .css3-shield-right {
+  fill: #333;
+}
+.portfolio-projects .project-tools .project-tool .less-circle {
+  fill: #333;
+}
+.portfolio-projects .project-tools .project-tool .less-inner-circle {
+  fill: #fff;
+}
+.portfolio-projects .project-tools .project-tool .jquery-wave {
+  fill: #333;
+}
+.portfolio-projects .project-tools .project-tool .grunt__eye,
+.portfolio-projects .project-tools .project-tool .grunt__tusk,
+.portfolio-projects .project-tools .project-tool .grunt__skin,
+.portfolio-projects .project-tools .project-tool .grunt__shading {
+  fill: #ececec;
+}
+.portfolio-projects .project-tools .project-tool .git-icon {
+  fill: #333;
+}
+.portfolio-projects .view-site-btn {
+  margin: 0 30px 40px;
+}
+.portfolio-projects .view-site-btn .btn {
+  transition: all .2s;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  border: 1px solid #333;
+  padding: 12px 20px;
+  color: #333;
+  background: transparent;
+  display: inline-block;
+}
+.portfolio-projects .view-site-btn .btn:hover {
+  background: #00addc;
+  border-color: #fff;
+  color: #fff;
+}
+/* =========================================================
+	Small desktop Up
+   ========================================================= */
+@media (min-width: 1200px) {
+  .portfolio-projects .project-image {
+    float: right;
+    width: 60%;
+    padding-bottom: 120px;
+  }
+  .portfolio-projects .project-description {
+    float: left;
+    width: 40%;
+    margin-top: 40px;
+  }
+}
+
+/* =========================================================
+	Contact section
+   ========================================================= */
+.contact-section {
+  background-color: #fff;
+  padding-bottom: 30px;
+  overflow: auto;
+}
+.contact-section .contact-title {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  font-weight: 500;
+  margin: 30px 0;
+}
+.contact-section .contact-form-container {
+  max-width: 90%;
+  margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   color: #333;
-  font-size: 28px;
+}
+.contact-section .contact-form-container .my-email {
+  font-size: 20px;
+  margin-left: 40px;
+  position: relative;
+  margin-bottom: 20px;
+  color: #333;
+}
+.contact-section .contact-form-container .my-email:before {
+  position: absolute;
+  content: "";
+  background-image: url('../../images/email-icon.svg');
+  width: 28px;
+  height: 28px;
+  color: #333;
+  left: -38px;
+  bottom: -2px;
+  background-position: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.contact-section .contact-form-container .label {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+.contact-section .contact-form-container input {
+  background-color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  outline: 0;
+  border: 1px #bbb solid;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+.contact-section .contact-form-container #message {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px #bbb solid;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+.contact-section .contact-form-container .submit-btn {
+  transition: all 0.2s;
+  font-size: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+.contact-section .contact-form-container .submit-btn:hover {
+  background-color: #00addc;
+  color: #fff;
+}
+@media (min-width: 690px) {
+  .contact-section .contact-form-container {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-section .contact-form-container {
+    max-width: 70%;
+  }
+  .contact-section .my-email {
+    float: right;
+    width: auto;
+  }
+  .contact-section .contact-form {
+    float: left;
+    width: 60%;
+  }
 }

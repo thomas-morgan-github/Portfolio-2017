@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 
 	    concat: {
 		    css: {
-		      src: ['css/header.css', 'css/cms.css', 'css/fonts.css', 'css/homepage.css', 'css/introduction.css', 'css/portfolio-projects.css'],
+		      src: ['css/header.css', 'css/cms.css', 'css/fonts.css', 'css/homepage.css', 'css/introduction.css', 'css/portfolio-projects.css', 'css/contact.css'],
 		      dest: 'build/css/styles.css',
 		    },
 	    },
@@ -71,6 +71,7 @@ module.exports = function(grunt) {
 		      'css/homepage.css': 'less/templates/homepage.less',
 		      'css/introduction.css': 'less/templates/homepage/partials/introduction.less',
 		      'css/portfolio-projects.css': 'less/templates/homepage/partials/portfolio-projects.less',
+		      'css/contact.css': 'less/templates/homepage/partials/contact.less',
 		    }
 		  },
 		},

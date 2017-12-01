@@ -4,18 +4,47 @@
    ========================================================= */
 
 .introduction {
-	background-color: #221f20;
+	background-color: #333;
 	margin-top: 141px;
+	overflow: auto;
+	
+	.container {
+		padding: 40px 30px 70px;
+		overflow: auto;
+	}
 
-	h1 {
+	.profile-photo-outside {
+		display: none;
+	}
+
+	.profile-photo-inner {
+		display: block;
+		max-width: 200px;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		vertical-align: top;
+	}
+
+	.intro-description-container {
+		text-align: left;
+	    background-color: #fff;
+	    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+	    border-radius: 4px;
+	    padding: 16px;
+	    box-sizing: border-box;
+	    vertical-align: top;
+	}
+
+	span {
 		font-family: 'Roboto', sans-serif;
 		color: #333;
 		font-size: 18px;
-		color: #fff;
-		text-align: center;
-		padding: 40px 30px 70px;
-		line-height: 23px;
+		display: block;
+		margin-bottom: 10px;
+		font-weight: 300;
+		line-height: normal;
 	}
+	
 }
 
 
@@ -23,11 +52,51 @@
 
 	.introduction {
 		margin-top: 112px;	
+
+		.container {
+			overflow: auto;
+		    max-width: 90%;
+		    margin: 0 auto;
+		    text-align: center
+		}
+
+		.profile-photo-outside {
+			display: inline-block;
+			margin-right: 30px;
+
+			img {
+				width: 210px;
+			}
+
+		}
+
+		.profile-photo-inner {
+			display: none;
+		}
 		
-		h1 {
-			max-width: 80%;
-    		margin: 0 auto;
-    		font-size: 21px;
+		.intro-description-container {
+			width: 60%;
+   			padding: 30px;
+   			display: inline-block;
+		}
+
+	}
+}
+
+@media (min-width:1600px)  {
+	
+	.introduction {
+		
+		.profile-photo-outside {
+
+			img {
+				width: 265px;
+			}
+		}
+
+		span {
+			font-size: 21px;
+			margin-bottom: 25px;
 		}
 	}
 }

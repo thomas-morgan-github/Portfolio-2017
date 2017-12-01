@@ -4,18 +4,200 @@
 
 .portfolio-projects {
 	
-	.project:nth-child(odd) {
-		background-color: #eee;
-	}
-	
-	.project:nth-child(even) {
-	    background-color: #ddd;
-	}
-	
+		
 	.project-title {
 		padding: 50px 30px 0;
 		font-family: 'Roboto', sans-serif;
 		color: #333;
 		font-size: 28px;
+	}
+
+	.project-image {
+		padding: 40px 30px;
+		box-sizing: border-box;
+		max-width: 100%;
+	}
+	
+	.project-description {
+		padding: 0 30px;
+		font-family: 'Roboto', sans-serif;
+		box-sizing: border-box;
+
+		.info-title {
+			font-size: 24px;
+			font-weight: 300;
+			margin-bottom: 5px;
+		}
+
+		.info-text {
+			margin-bottom: 40px;
+			line-height: 24px;
+		}
+	}
+
+	.project {
+		overflow: hidden;
+	
+		&:nth-child(odd) {
+			background-color: #eee;
+		}
+	
+		&:nth-child(even) {
+		    background-color: #ddd;
+		}
+	}
+
+	.project-tools {
+		margin-bottom: 20px;
+
+		.project-tool {
+			width: 50px;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			
+			.project-tool-link {
+
+				&:hover {
+					
+					.html5-shield-left {
+						fill: #E44F26;
+					}
+
+					.html5-shield-right {
+						fill: #f1662a;
+					}
+
+					.css3-shield-left {
+						fill: #1572B6;
+					}
+
+					.css3-shield-right {
+						fill: #33a9dc;
+					}
+
+					.css3-3-top-left {
+						fill: #ebebeb;
+					}
+
+					.css3-3-top-right {
+						fill: #fff;
+					}
+					
+					.css3-3-bottom-left {
+						fill: #ebebeb;
+					}
+
+					.css3-3-bottom-right {
+						fill: #fff;
+					}
+					
+					.less-circle {
+						fill: #214674;
+					}
+					
+					.less-inner-circle {
+						fill: #fff;
+					}
+			
+					.jquery-wave {
+						fill: #3162a8;
+					}
+
+					.grunt__skin, .grunt__skin, .grunt__skin {
+					    fill: #FBA919;
+					}
+
+					.grunt__outline, .grunt__outline, .grunt__outline {
+					    fill: #463014;
+					}
+
+					.grunt__shading {
+					    fill: #E78724;
+					}
+
+					.git-icon {
+						fill: #f03c2e;	
+					}
+				}
+			}
+
+			svg {
+				width: 100%;
+				max-height: 75px;
+			}
+
+			.html5-shield-left, .html5-shield-right, 
+			.html5-text, .css3-text, .css3-shield-left, .css3-shield-right {
+				fill : #333;
+			}
+
+			.less-circle {
+				fill: #333;
+			}
+			
+			.less-inner-circle {
+				fill: #fff;
+			}
+
+			.jquery-wave {
+				fill: #333;
+			}
+
+			.grunt__eye, .grunt__tusk, .grunt__skin, .grunt__shading {
+				fill: #ececec;
+			}
+
+			.git-icon {
+    			fill: #333;
+			}
+		}
+	}
+
+	.view-site-btn {
+		margin: 0 30px 40px;
+
+		.btn {
+			transition: all .2s;
+		    border-radius: 3px;
+			font-family: 'Roboto', sans-serif;
+		    font-size: 18px;
+		    border: 1px solid #333;
+		    padding: 12px 20px;
+		    color: #333;
+		    background: transparent;
+		    display: inline-block;
+			
+			&:hover {
+				background: #00addc;
+				border-color: #fff;
+				color: #fff;
+			}
+		}
+	}
+
+}
+
+
+/* =========================================================
+	Small desktop Up
+   ========================================================= */
+
+@media (min-width:1200px)  {
+	
+	.portfolio-projects {
+		
+		.project-image {
+			float: right;
+			width: 60%;
+			padding-bottom: 120px;
+		}
+
+		.project-description {
+			float: left;
+		    width: 40%;
+		    margin-top: 40px;
+		}
 	}
 }

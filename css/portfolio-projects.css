@@ -1,15 +1,160 @@
 /* =========================================================
 	Portfolio Projects 
    ========================================================= */
+.portfolio-projects .project-title {
+  padding: 50px 30px 0;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 28px;
+}
+.portfolio-projects .project-image {
+  padding: 40px 30px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.portfolio-projects .project-description {
+  padding: 0 30px;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+.portfolio-projects .project-description .info-title {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.portfolio-projects .project-description .info-text {
+  margin-bottom: 40px;
+  line-height: 24px;
+}
+.portfolio-projects .project {
+  overflow: hidden;
+}
 .portfolio-projects .project:nth-child(odd) {
   background-color: #eee;
 }
 .portfolio-projects .project:nth-child(even) {
   background-color: #ddd;
 }
-.portfolio-projects .project-title {
-  padding: 50px 30px 0;
+.portfolio-projects .project-tools {
+  margin-bottom: 20px;
+}
+.portfolio-projects .project-tools .project-tool {
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .html5-shield-left {
+  fill: #E44F26;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .html5-shield-right {
+  fill: #f1662a;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-shield-left {
+  fill: #1572B6;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-shield-right {
+  fill: #33a9dc;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-3-top-left {
+  fill: #ebebeb;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-3-top-right {
+  fill: #fff;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-3-bottom-left {
+  fill: #ebebeb;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .css3-3-bottom-right {
+  fill: #fff;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .less-circle {
+  fill: #214674;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .less-inner-circle {
+  fill: #fff;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .jquery-wave {
+  fill: #3162a8;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__skin,
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__skin,
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__skin {
+  fill: #FBA919;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__outline,
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__outline,
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__outline {
+  fill: #463014;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .grunt__shading {
+  fill: #E78724;
+}
+.portfolio-projects .project-tools .project-tool .project-tool-link:hover .git-icon {
+  fill: #f03c2e;
+}
+.portfolio-projects .project-tools .project-tool svg {
+  width: 100%;
+  max-height: 75px;
+}
+.portfolio-projects .project-tools .project-tool .html5-shield-left,
+.portfolio-projects .project-tools .project-tool .html5-shield-right,
+.portfolio-projects .project-tools .project-tool .html5-text,
+.portfolio-projects .project-tools .project-tool .css3-text,
+.portfolio-projects .project-tools .project-tool .css3-shield-left,
+.portfolio-projects .project-tools .project-tool .css3-shield-right {
+  fill: #333;
+}
+.portfolio-projects .project-tools .project-tool .less-circle {
+  fill: #333;
+}
+.portfolio-projects .project-tools .project-tool .less-inner-circle {
+  fill: #fff;
+}
+.portfolio-projects .project-tools .project-tool .jquery-wave {
+  fill: #333;
+}
+.portfolio-projects .project-tools .project-tool .grunt__eye,
+.portfolio-projects .project-tools .project-tool .grunt__tusk,
+.portfolio-projects .project-tools .project-tool .grunt__skin,
+.portfolio-projects .project-tools .project-tool .grunt__shading {
+  fill: #ececec;
+}
+.portfolio-projects .project-tools .project-tool .git-icon {
+  fill: #333;
+}
+.portfolio-projects .view-site-btn {
+  margin: 0 30px 40px;
+}
+.portfolio-projects .view-site-btn .btn {
+  transition: all .2s;
+  border-radius: 3px;
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  border: 1px solid #333;
+  padding: 12px 20px;
   color: #333;
-  font-size: 28px;
+  background: transparent;
+  display: inline-block;
+}
+.portfolio-projects .view-site-btn .btn:hover {
+  background: #00addc;
+  border-color: #fff;
+  color: #fff;
+}
+/* =========================================================
+	Small desktop Up
+   ========================================================= */
+@media (min-width: 1200px) {
+  .portfolio-projects .project-image {
+    float: right;
+    width: 60%;
+    padding-bottom: 120px;
+  }
+  .portfolio-projects .project-description {
+    float: left;
+    width: 40%;
+    margin-top: 40px;
+  }
 }
