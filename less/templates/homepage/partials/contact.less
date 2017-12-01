@@ -4,16 +4,16 @@
 
 .contact-section {
 	background-color: #fff;
-	padding-bottom: 30px;
+	padding-bottom: 40px;
 	overflow: auto;
 
 	.contact-title {
-		font-family: 'Roboto', sans-serif;
+		font-family: 'Cantarell', sans-serif;
 		text-align: center;
 		font-size: 36px;
 		color: #333;
 		font-weight: 500;
-		margin: 30px 0;
+		margin: 25px 0;
 	}
 
 	.contact-form-container {
@@ -23,11 +23,12 @@
 		color: #333;
 		
 		.my-email {
-			font-size: 20px;
+			font-size: 16px;
 			margin-left: 40px;
 			position: relative;
 			margin-bottom: 20px;
 			color: #333;
+			display: block;
 
 			&:before {
 				position: absolute;
@@ -35,8 +36,29 @@
 				background-image: url('../../images/email-icon.svg');
 				width: 28px;
 				height: 28px;
-				color: #333;
 				left: -38px;
+    			bottom: -3px;
+				background-position: 0;
+				background-size: 100%;
+				background-repeat: no-repeat;
+			}
+		}
+
+		.my-location {
+			font-size: 16px;
+			margin-left: 40px;
+			position: relative;
+			margin-bottom: 30px;
+			display: block;
+
+			&:before {
+				position: absolute;
+				content: "";
+				background-image: url('../../images/location.svg');
+				width: 22px;
+    			height: 29px;
+				color: #333;
+				left: -35px;
     			bottom: -2px;
 				background-position: 0;
 				background-size: 100%;
@@ -46,7 +68,7 @@
 
 		.label {
 			font-size: 20px;
-			font-weight: 300;
+			font-weight: 500;
 			margin-top: 10px;
 			margin-bottom: 10px;
 			display: block;
@@ -59,11 +81,14 @@
 		    padding: 10px;
 		    font-size: 16px;
 		    outline: 0;
-		    border: 1px #bbb solid;
+		    border: 1px solid #333;
 		    box-sizing: border-box;
 		    font-family: 'Roboto', sans-serif;
 		    font-weight: 300;
-
+			
+			&:focus {
+				outline: #00addc auto 5px;
+			}
 		}
 
 		#message {
@@ -71,23 +96,36 @@
 			box-sizing: border-box;
 			padding: 10px;
 			margin-bottom: 10px;
-			border: 1px #bbb solid;
+			border: 1px solid #333;
 			font-size: 16px;
 			font-weight: 300;
 			color: #333;
 			font-family: 'Roboto', sans-serif;
+			overflow: hidden;
+
+			&:focus {
+				outline: #00addc auto 5px;
+			}
 		}
 
 		.submit-btn {
-			transition: all 0.2s;
-			font-size: 20px;
-			max-width: 400px;
+		    transition: all .2s;
+		    border-radius: 3px;
+		    font-family: 'Roboto', sans-serif;
+		    font-size: 18px;
+		    border: 1px solid #333;
+		    padding: 12px 20px;
+		    background: transparent;
+		    display: inline-block;
+		    max-width: 300px;
 		    margin: 0 auto;
-		    display: block;
+		    font-weight: 400;
+		    color: #333;
 
 			&:hover {
-				background-color:  #00addc;
+				background-color: #00addc;
 				color: #fff;
+				border-color: #fff;
 			}
 		}
 	}
@@ -101,6 +139,18 @@
 		.contact-form-container {
 			max-width: 50%;
 			margin: 0 auto;
+
+			.my-email, .my-location {
+				font-size: 20px;
+			}
+
+			.my-email {
+				margin-bottom: 10px;
+
+				&:before {
+					bottom: -1px;
+				}
+			}
 		}
 	}
 }
@@ -113,18 +163,36 @@
 		
 		.contact-form-container {
 			max-width: 70%;
+			overflow: auto;
 		}
 
-		.my-email {
+		.my-info {
 			float: right;
 			width: auto;
+
+			.my-email {
+				margin-bottom: 20px;
+			}
 		}
 		
 		.contact-form {
 			float: left;
 			width: 60%;
+			margin-top: -11px;
 		}
 
+	}
+}
+
+
+@media (min-width: 1800px)  {
+	
+	.contact-section {
+		
+		.contact-form-container {
+			max-width: 48%;
+			overflow: auto;
+		}
 	}
 }
 

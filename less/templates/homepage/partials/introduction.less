@@ -15,6 +15,10 @@
 
 	.profile-photo-outside {
 		display: none;
+
+		img {
+			border-radius: 50%;
+		}
 	}
 
 	.profile-photo-inner {
@@ -23,26 +27,32 @@
 		margin: 0 auto;
 		padding-bottom: 20px;
 		vertical-align: top;
+		border-radius: 50%;
 	}
 
 	.intro-description-container {
 		text-align: left;
-	    background-color: #fff;
 	    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 	    border-radius: 4px;
 	    padding: 16px;
 	    box-sizing: border-box;
-	    vertical-align: top;
+	    vertical-align: top;  
+	    background-color: transparent;
+   		border: 1px solid #fff;
 	}
 
 	span {
-		font-family: 'Roboto', sans-serif;
-		color: #333;
-		font-size: 18px;
+		font-family: 'Cantarell', sans-serif;
+		color: #fff;
+		font-size: 21px;
 		display: block;
 		margin-bottom: 10px;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: normal;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 	
 }
@@ -86,7 +96,7 @@
 @media (min-width:1600px)  {
 	
 	.introduction {
-		
+
 		.profile-photo-outside {
 
 			img {
@@ -95,8 +105,8 @@
 		}
 
 		span {
-			font-size: 21px;
-			margin-bottom: 25px;
+			font-size: 24px;
+			margin-bottom: 10px;
 		}
 	}
 }

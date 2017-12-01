@@ -44,6 +44,10 @@
   margin-bottom: 20px;
   display: inline-block;
   vertical-align: middle;
+  transition: all 0.2s ease-out;
+}
+.portfolio-projects .project-tools .project-tool:hover {
+  transform: scale(1.15, 1.15);
 }
 .portfolio-projects .project-tools .project-tool .project-tool-link:hover .html5-shield-left {
   fill: #E44F26;

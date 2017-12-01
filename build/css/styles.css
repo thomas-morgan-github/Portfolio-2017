@@ -91,7 +91,7 @@
   height: 40px;
 }
 .header-container .navbar .nav .social-icons .icon {
-  fill: #000;
+  fill: #333;
   width: 100px;
   height: 100px;
   transition: all 0.2s;
@@ -187,30 +187,38 @@ ul {
 .introduction .profile-photo-outside {
   display: none;
 }
+.introduction .profile-photo-outside img {
+  border-radius: 50%;
+}
 .introduction .profile-photo-inner {
   display: block;
   max-width: 200px;
   margin: 0 auto;
   padding-bottom: 20px;
   vertical-align: top;
+  border-radius: 50%;
 }
 .introduction .intro-description-container {
   text-align: left;
-  background-color: #fff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 16px;
   box-sizing: border-box;
   vertical-align: top;
+  background-color: transparent;
+  border: 1px solid #fff;
 }
 .introduction span {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  font-size: 18px;
+  font-family: 'Cantarell', sans-serif;
+  color: #fff;
+  font-size: 21px;
   display: block;
   margin-bottom: 10px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: normal;
+}
+.introduction span:last-of-type {
+  margin-bottom: 0;
 }
 @media (min-width: 690px) {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
@@ -244,8 +252,8 @@ ul {
     width: 265px;
   }
   .introduction span {
-    font-size: 21px;
-    margin-bottom: 25px;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 }
 
@@ -295,6 +303,10 @@ ul {
   margin-bottom: 20px;
   display: inline-block;
   vertical-align: middle;
+  transition: all 0.2s ease-out;
+}
+.portfolio-projects .project-tools .project-tool:hover {
+  transform: scale(1.15, 1.15);
 }
 .portfolio-projects .project-tools .project-tool .project-tool-link:hover .html5-shield-left {
   fill: #E44F26;
@@ -415,16 +427,16 @@ ul {
    ========================================================= */
 .contact-section {
   background-color: #fff;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   overflow: auto;
 }
 .contact-section .contact-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cantarell', sans-serif;
   text-align: center;
   font-size: 36px;
   color: #333;
   font-weight: 500;
-  margin: 30px 0;
+  margin: 25px 0;
 }
 .contact-section .contact-form-container {
   max-width: 90%;
@@ -433,11 +445,12 @@ ul {
   color: #333;
 }
 .contact-section .contact-form-container .my-email {
-  font-size: 20px;
+  font-size: 16px;
   margin-left: 40px;
   position: relative;
   margin-bottom: 20px;
   color: #333;
+  display: block;
 }
 .contact-section .contact-form-container .my-email:before {
   position: absolute;
@@ -445,8 +458,27 @@ ul {
   background-image: url('../../images/email-icon.svg');
   width: 28px;
   height: 28px;
-  color: #333;
   left: -38px;
+  bottom: -3px;
+  background-position: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.contact-section .contact-form-container .my-location {
+  font-size: 16px;
+  margin-left: 40px;
+  position: relative;
+  margin-bottom: 30px;
+  display: block;
+}
+.contact-section .contact-form-container .my-location:before {
+  position: absolute;
+  content: "";
+  background-image: url('../../images/location.svg');
+  width: 22px;
+  height: 29px;
+  color: #333;
+  left: -35px;
   bottom: -2px;
   background-position: 0;
   background-size: 100%;
@@ -454,7 +486,7 @@ ul {
 }
 .contact-section .contact-form-container .label {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 10px;
   margin-bottom: 10px;
   display: block;
@@ -466,49 +498,85 @@ ul {
   padding: 10px;
   font-size: 16px;
   outline: 0;
-  border: 1px #bbb solid;
+  border: 1px solid #333;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+}
+.contact-section .contact-form-container input:focus {
+  outline: #00addc auto 5px;
 }
 .contact-section .contact-form-container #message {
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px #bbb solid;
+  border: 1px solid #333;
   font-size: 16px;
   font-weight: 300;
   color: #333;
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+.contact-section .contact-form-container #message:focus {
+  outline: #00addc auto 5px;
 }
 .contact-section .contact-form-container .submit-btn {
-  transition: all 0.2s;
-  font-size: 20px;
-  max-width: 400px;
+  transition: all .2s;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  border: 1px solid #333;
+  padding: 12px 20px;
+  background: transparent;
+  display: inline-block;
+  max-width: 300px;
   margin: 0 auto;
-  display: block;
+  font-weight: 400;
+  color: #333;
 }
 .contact-section .contact-form-container .submit-btn:hover {
   background-color: #00addc;
   color: #fff;
+  border-color: #fff;
 }
 @media (min-width: 690px) {
   .contact-section .contact-form-container {
     max-width: 50%;
     margin: 0 auto;
   }
+  .contact-section .contact-form-container .my-email,
+  .contact-section .contact-form-container .my-location {
+    font-size: 20px;
+  }
+  .contact-section .contact-form-container .my-email {
+    margin-bottom: 10px;
+  }
+  .contact-section .contact-form-container .my-email:before {
+    bottom: -1px;
+  }
 }
 @media (min-width: 1200px) {
   .contact-section .contact-form-container {
     max-width: 70%;
+    overflow: auto;
   }
-  .contact-section .my-email {
+  .contact-section .my-info {
     float: right;
     width: auto;
+  }
+  .contact-section .my-info .my-email {
+    margin-bottom: 20px;
   }
   .contact-section .contact-form {
     float: left;
     width: 60%;
+    margin-top: -11px;
+  }
+}
+@media (min-width: 1800px) {
+  .contact-section .contact-form-container {
+    max-width: 48%;
+    overflow: auto;
   }
 }
