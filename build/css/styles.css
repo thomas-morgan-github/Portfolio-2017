@@ -41,7 +41,8 @@
   background: #333;
   left: -34px;
   top: 50%;
-  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
   transition: all 0.2s;
 }
 .header-container .logo .logo-description:after {
@@ -52,7 +53,8 @@
   background: #333;
   right: -75px;
   top: 50%;
-  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
   transition: all 0.2s;
 }
 .header-container .logo:hover .logo-name {
@@ -306,7 +308,8 @@ ul {
   transition: all 0.2s ease-out;
 }
 .portfolio-projects .project-tools .project-tool:hover {
-  transform: scale(1.15, 1.15);
+  -ms-transform: scale(1.15, 1.15);
+      transform: scale(1.15, 1.15);
 }
 .portfolio-projects .project-tools .project-tool .project-tool-link:hover .html5-shield-left {
   fill: #E44F26;
